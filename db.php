@@ -1,4 +1,5 @@
 <?php
+// db.php
 $host = 'localhost';
 $db = 'hacking_blog';
 $user = 'root'; // Your MySQL username
