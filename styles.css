@@ -7,16 +7,16 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #f5f5f5;
+    background-color: #181818; /* Dark background */
+    color: #f0f0f0; /* Light text color */
     line-height: 1.6;
 }
 
 header {
-    background: #222;
+    background: #222; /* Darker header */
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #ffcc00; /* Golden bottom border */
+    border-bottom: 3px solid #ffcc00; /* Golden bottom border */
 }
 
 h1 {
@@ -24,18 +24,20 @@ h1 {
     color: #ffcc00; /* Golden color for main title */
 }
 
-.shoutbox {
-    margin: 20px auto;
-    background: #333;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 80%; /* Center the shoutbox */
+h2 {
+    font-size: 1.5em;
+    color: #ffcc00; /* Golden color for headings */
+    margin: 20px 0;
 }
 
-.shoutbox h2 {
-    margin-bottom: 10px;
-    color: #ffcc00; /* Golden color for shoutbox title */
+.shoutbox, .post {
+    background: #333; /* Dark background for sections */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 80%; /* Centering sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444; /* Subtle border */
 }
 
 form {
@@ -47,10 +49,10 @@ form {
 input[type="text"],
 textarea {
     padding: 10px;
-    border: 1px solid #666; /* Border for input fields */
+    border: 1px solid #666; /* Dark border */
     border-radius: 4px;
-    background: #444;
-    color: #f5f5f5;
+    background: #444; /* Dark input background */
+    color: #f5f5f5; /* Light text color */
 }
 
 textarea {
@@ -59,8 +61,8 @@ textarea {
 }
 
 button {
-    background: #ffcc00;
-    color: #222;
+    background: #ffcc00; /* Golden button */
+    color: #222; /* Dark text on button */
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -77,7 +79,7 @@ button:hover {
 }
 
 .shout {
-    background: #555;
+    background: #444; /* Darker background for each shout */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -88,34 +90,10 @@ button:hover {
     color: #ffcc00; /* Golden color for usernames */
 }
 
-main {
-    padding: 20px;
-    width: 80%; /* Center the main content */
-    margin: 0 auto; /* Center alignment */
-}
-
-h1, h2 {
-    margin: 20px 0;
-}
-
-.post {
-    background: #333;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #666; /* Border for posts */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.post h2 {
-    margin-bottom: 10px;
-    color: #ffcc00; /* Golden color for post titles */
-}
-
 footer {
     text-align: center;
     padding: 10px;
-    background: #222;
+    background: #222; /* Dark footer */
     position: relative;
     bottom: 0;
     width: 100%;
@@ -126,9 +104,19 @@ footer p {
     color: #777; /* Slightly lighter color for footer text */
 }
 
+/* Links */
+a {
+    color: #ffcc00; /* Golden link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-    .shoutbox, main {
-        width: 95%; /* Make shoutbox and main content full-width on smaller screens */
+    .shoutbox, .post {
+        width: 95%; /* Full width on smaller screens */
     }
 }
