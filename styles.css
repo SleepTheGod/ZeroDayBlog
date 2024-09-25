@@ -16,6 +16,7 @@ header {
     background: #222;
     padding: 20px;
     text-align: center;
+    border-bottom: 2px solid #ffcc00; /* Golden bottom border */
 }
 
 h1 {
@@ -24,11 +25,12 @@ h1 {
 }
 
 .shoutbox {
-    margin-top: 20px;
+    margin: 20px auto;
     background: #333;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%; /* Center the shoutbox */
 }
 
 .shoutbox h2 {
@@ -45,20 +47,15 @@ form {
 input[type="text"],
 textarea {
     padding: 10px;
-    border: none;
+    border: 1px solid #666; /* Border for input fields */
     border-radius: 4px;
-    resize: none; /* Prevent resizing of textarea */
-}
-
-input[type="text"] {
     background: #444;
     color: #f5f5f5;
 }
 
 textarea {
     height: 100px;
-    background: #444;
-    color: #f5f5f5;
+    resize: none; /* Prevent resizing of textarea */
 }
 
 button {
@@ -84,6 +81,7 @@ button:hover {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
+    border-left: 5px solid #ffcc00; /* Highlight for shout */
 }
 
 .shout strong {
@@ -92,6 +90,8 @@ button:hover {
 
 main {
     padding: 20px;
+    width: 80%; /* Center the main content */
+    margin: 0 auto; /* Center alignment */
 }
 
 h1, h2 {
@@ -103,7 +103,13 @@ h1, h2 {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
+    border: 1px solid #666; /* Border for posts */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.post h2 {
+    margin-bottom: 10px;
+    color: #ffcc00; /* Golden color for post titles */
 }
 
 footer {
@@ -120,63 +126,9 @@ footer p {
     color: #777; /* Slightly lighter color for footer text */
 }
 
-body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-    font-family: 'Courier New', monospace;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background: #000;
-    padding: 20px;
-    text-align: center;
-}
-
-.shoutbox {
-    background: #222;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.shoutbox form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.shoutbox input, .shoutbox textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.shouts {
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.shout {
-    border-bottom: 1px solid #444;
-    padding: 5px 0;
-}
-
-main {
-    padding: 20px;
-}
-
-.post {
-    background: #222;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
+/* Responsive design */
+@media (max-width: 768px) {
+    .shoutbox, main {
+        width: 95%; /* Make shoutbox and main content full-width on smaller screens */
+    }
 }
