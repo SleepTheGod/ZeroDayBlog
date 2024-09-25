@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include 'db.php';
 
@@ -6,6 +6,8 @@ include 'db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['shout'])) {
     $username = htmlspecialchars($_POST['username']);
     $message = htmlspecialchars($_POST['message']);
+    
+    // Insert shout into the database
     $stmt = $pdo->prepare("INSERT INTO shoutbox (username, message) VALUES (?, ?)");
     $stmt->execute([$username, $message]);
 }
@@ -26,6 +28,7 @@ $posts = $pdo->query("SELECT posts.*, users.username FROM posts JOIN users ON po
 </head>
 <body>
     <header>
+        <h1>Zero Day Hacking Blog</h1>
         <div class="shoutbox">
             <h2>Shoutbox</h2>
             <form method="POST">
@@ -49,7 +52,7 @@ $posts = $pdo->query("SELECT posts.*, users.username FROM posts JOIN users ON po
         <?php foreach ($posts as $post): ?>
             <div class="post">
                 <h2><?php echo htmlspecialchars($post['title']); ?></h2>
-                <p><?php echo htmlspecialchars($post['content']); ?></p>
+                <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
                 <p>Posted by: <?php echo htmlspecialchars($post['username']); ?> on <?php echo $post['created_at']; ?></p>
             </div>
         <?php endforeach; ?>
