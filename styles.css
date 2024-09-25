@@ -1,3 +1,125 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffcc00; /* Golden color for main title */
+}
+
+.shoutbox {
+    margin-top: 20px;
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.shoutbox h2 {
+    margin-bottom: 10px;
+    color: #ffcc00; /* Golden color for shoutbox title */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    resize: none; /* Prevent resizing of textarea */
+}
+
+input[type="text"] {
+    background: #444;
+    color: #f5f5f5;
+}
+
+textarea {
+    height: 100px;
+    background: #444;
+    color: #f5f5f5;
+}
+
+button {
+    background: #ffcc00;
+    color: #222;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6b800; /* Darker golden on hover */
+}
+
+.shouts {
+    margin-top: 15px;
+}
+
+.shout {
+    background: #555;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.shout strong {
+    color: #ffcc00; /* Golden color for usernames */
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+.post {
+    background: #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #777; /* Slightly lighter color for footer text */
+}
+
 body {
     background-color: #1a1a1a;
     color: #e0e0e0;
