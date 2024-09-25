@@ -1,7 +1,7 @@
 -- Create the database
 CREATE DATABASE IF NOT EXISTS hacking_blog;
 
--- Select the database
+-- Select the database for use
 USE hacking_blog;
 
 -- Create the users table
